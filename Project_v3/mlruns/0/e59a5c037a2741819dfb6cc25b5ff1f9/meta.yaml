@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tgl/PycharmProjects/MLporduction/Project_v3/mlruns/0/e59a5c037a2741819dfb6cc25b5ff1f9/artifacts
+end_time: 1672753117054
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e59a5c037a2741819dfb6cc25b5ff1f9
+run_name: sassy-toad-496
+run_uuid: e59a5c037a2741819dfb6cc25b5ff1f9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672753116138
+status: 3
+tags: []
+user_id: tgl
