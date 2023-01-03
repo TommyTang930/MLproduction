@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<title>基于Flask提供预测服务</title>
+	</head>
+
+	<body>
+		<h1><div style="text-align:centre"><font color='blue'> 逻辑回顾预测模型 </font></div></h1>
+		<hr>
+		</br>	
+
+		<h2><div style="text-align:centre">请输入特征值: </div></h2>
+
+		</br>
+
+		<div class='container'>
+			<div class='row'>
+				<div class='col-6'>
+					<form method="POST" action="/predict">
+						<div class='form-group'>
+							<label for="v1"><p class="font-weight-bold">v1</p></label>
+							<input type='text' name="v1">
+							</div>
+
+							<div class='form-group'>
+								<label for="v2"><p class="font-weight-bold">v2</p></label>
+								<input type='text' name="v2">
+								
+								</div>
+								<div class='form-group'>
+									<label for="v3"><p class="font-weight-bold">v3</p></label>
+									<input type='text' name="v3">
+									
+									</div>
+									<div class='form-group'>
+										<label for="v4"><p class="font-weight-bold">v4</p></label>
+										<input type='text' name="v4">
+										
+										</div>
+<!--										<div class='form-group'>-->
+<!--											<label for="var_5"><p class="font-weight-bold">var_5</p></label>-->
+<!--											<input type='text' name="var_5">-->
+<!--											-->
+<!--											</div>-->
+
+											<input class='btn btn-primary' type='submit' value='提交'>
+
+						</form>
+					</div>
+					</div>
+					</div>	
+		
+	</body>
+</html>
