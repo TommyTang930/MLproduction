@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Approval Prediction</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../static/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Applicant form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">贷款申请</h2>
+                        <form action="/prediction" method="POST" class="register-form" id="register-form">
+                            <h3>Identity</h3>
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="姓名" required/>
+                            </div>
+                            <!-- Birthdate -->
+                            <div class="form-group">
+                                <label for="birthdate"><i class="zmdi zmdi-calendar"></i></label>
+                                <input type="date" name="birthdate" id="birthdate" placeholder="生日" required/>
+                            </div>
+                            <!-- Gender -->
+                            <div class="form-group">
+                                <label for="gender"><i class="zmdi zmdi-accounts"></i></label>
+                                <select name="gender" id="gender" placeholder="性别" required>
+                                    <option value="" disabled selected>性别</option>
+                                    <option value="Male">男</option>
+                                    <option value="Female">女</option>
+                                </select>
+                            </div>
+                            <!-- Education -->
+                            <div class="form-group">
+                                <label for="education"><i class="zmdi zmdi-book"></i></label>
+                                <select name="education" id="education" placeholder="教育" required>
+                                    <option value="" disabled selected>教育</option>
+                                    <option value="Not Graduate">未毕业</option>
+                                    <option value="Graduate">已毕业</option>
+                                </select>
+                            </div>
+                            <!-- Self Employed -->
+                            <div class="form-group">
+                                <label for="self_employed"><i class="zmdi zmdi-case"></i></label>
+                                <select name="self_employed" id="self_employed" placeholder="Are You Employed?" required>
+                                    <option value="" disabled selected>是否有工作？</option>
+                                    <option value="Yes">是</option>
+                                    <option value="No">否</option>
+                                </select>
+                            </div>
+                            <!-- Marital Status -->
+                            <div class="form-group">
+                                <label for="martial_status"><i class="zmdi zmdi-accounts-alt"></i></label>
+                                <select name="martial_status" id="martial_status" placeholder="你的婚姻状态" required>
+                                    <option value="" disabled selected>婚姻状态</option>
+                                    <option value="No">单身</option>
+                                    <option value="Yes">已婚</option>
+                                </select>
+                            </div>
+                            <!-- Dependents -->
+                            <div class="form-group">
+                                <label for="dependents"><i class="zmdi zmdi-accounts-add"></i></label>
+                                <select name="dependents" id="dependents" placeholder="家属人数" required>
+                                    <option value="" disabled selected>家属人数</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3+">3+</option>
+                                </select>
+                            </div>
+                            <!-- Property Area -->
+                            <div class="form-group">
+                                <label for="property_area"><i class="zmdi zmdi-home"></i></label>
+                                <select name="property_area" id="property_area" placeholder="家庭住址" required>
+                                    <option value="" disabled selected>家庭住址</option>
+                                    <option value="Urban">Urban</option>
+                                    <option value="Semiurban">Semi-Urban</option>
+                                    <option value="Rural">Rural</option>
+                                </select>
+                            </div>
+                            <!-- Applicant Income per Month -->
+                            <div class="form-group">
+                                <label for="applicant_income"><i class="zmdi zmdi-money"></i></label>
+                                <input type="number" min="0" name="applicant_income" placeholder="月收入 (USD)" required/>
+                            </div>
+                            <!-- Co-Applicant Income per Month -->
+                            <div class="form-group">
+                                <label for="coapplicant_income"><i class="zmdi zmdi-money"></i></label>
+                                <input type="number" min="0" name="coapplicant_income" placeholder="联合申请人月收入 (USD)" required/>
+                            </div>
+                            <h3>贷款和信用描述</h3>
+                            <!-- Loan Amount -->
+                            <div class="form-group">
+                                <label for="loan_amount"><i class="zmdi zmdi-money"></i></label>
+                                <input type="number" min="0" name="loan_amount" placeholder="贷款金额 (USD)" required/>
+                            </div>
+                            <!-- Loan Amount Term -->
+                            <div class="form-group">
+                                <label for="loan_term"><i class="zmdi zmdi-calendar-check"></i></label>
+                                <input type="number" min="0" name="loan_term" placeholder="贷款时间 (days)" required/>
+                            </div>
+                            <!-- Credit History -->
+                            <div class="form-group">
+                                <label for="credit_history"><i class="zmdi zmdi-calendar-check"></i></label>
+                                <select name="credit_history" id="credit_history" placeholder="信贷历史" required>
+                                    <option value="" disabled selected>信贷历史</option>
+                                    <option value="1">已付清</option>
+                                    <option value="0">未付清</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>我同意所有条款  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Check Status"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="../static/images/signup-image.jpg" alt="sing up image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </div>
+
+</body>
+</html>
