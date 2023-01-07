@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/tgl/PycharmProjects/MLporduction/Project_v4/backend/mlruns/286848078291788387/7bc86c33c5bf4189ae2528657cb7ef8b/artifacts
+deleted_time: 1672842649573
+end_time: 1672814593380
+entry_point_name: ''
+experiment_id: '286848078291788387'
+lifecycle_stage: deleted
+run_id: 7bc86c33c5bf4189ae2528657cb7ef8b
+run_name: bright-stoat-221
+run_uuid: 7bc86c33c5bf4189ae2528657cb7ef8b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672813853048
+status: 4
+tags: []
+user_id: tgl
